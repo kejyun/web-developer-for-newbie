@@ -1,0 +1,353 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – 服務</title>
+    <link>https://web-developer-for-newbie.kejyun.com/tags/%E6%9C%8D%E5%8B%99/</link>
+    <description>Recent content in 服務 on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 22 Apr 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/tags/%E6%9C%8D%E5%8B%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Resource: AWS </title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/aws/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/aws/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;官方&#34;&gt;官方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/&#34;&gt;Amazon Web Services (AWS)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;監控測試&#34;&gt;監控測試&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudharmony.com/speedtest-for-aws&#34;&gt;Amazon Web Services Network Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[https://status.aws.amazon.com/](AWS Service Health Dashboard)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 主機</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;hosting&#34;&gt;Hosting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/&#34;&gt;Amazon Web Services (AWS)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudharmony.com/speedtest-for-aws&#34;&gt;Amazon Web Services Network Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform (GCP)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://azure.microsoft.com/zh-tw/&#34;&gt;Microsoft Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linode.com/&#34;&gt;Linode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.heroku.com/&#34;&gt;Heroku&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.vultr.com/&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.openshift.com/&#34;&gt;OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.parse.com/&#34;&gt;Parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hostinger.com.hk/&#34;&gt;Hostinger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.serverloft.de/&#34;&gt;serverloft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.noip.com/&#34;&gt;No-IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.godaddy.com/&#34;&gt;Godaddy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssl&#34;&gt;SSL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ssls.com/&#34;&gt;SSL Certificates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/letsencrypt/letsencrypt&#34;&gt;letsencrypt github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Gas_sSB-5SU&#34;&gt;Let&amp;rsquo;s Encrypt Demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.startssl.com/&#34;&gt;StartSSL™ Certificates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sslforfree.com/&#34;&gt;SSL For Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ssl.comodo.com/&#34;&gt;Comodo SSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.symantec.com/zh/tw/ssl-certificates/&#34;&gt;Symantec SSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tw.godaddy.com/web-security/ssl-certificate&#34;&gt;SSL 憑證 GoDaddy TW&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;websites-builder&#34;&gt;Websites Builder&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.weebly.com/&#34;&gt;Weebly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wix.com/&#34;&gt;WIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://squarespace.com/&#34;&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jimdo.com/index.php&#34;&gt;Jimdo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webydo.com/&#34;&gt;Webydo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.strikingly.com/&#34;&gt;Strikingly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webnode.tw/personal-websites/&#34;&gt;Webnode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Email</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/email/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/email/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;email-服務&#34;&gt;Email 服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mandrill.com/&#34;&gt;Mandrill - Transactional Email from MailChimp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mailgun.com/&#34;&gt;Mailgun - Transactional Email API Service for Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendgrid.com/&#34;&gt;SendGrid - Email Delivery &amp;amp; Transactional Email Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mailchimp.com/&#34;&gt;MailChimp - Send Better Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/tw/ses/&#34;&gt;AWS - Amazon Simple Email Service (SES) – 以雲端為基礎的電子郵件服務&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;簡訊服務&#34;&gt;簡訊服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.afreesms.com/freesms/&#34;&gt;Send Free SMS Worldwide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 圖片</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/photo/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/photo/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;圖片服務&#34;&gt;圖片服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://imgur.com/&#34;&gt;Imgur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://photobucket.com/&#34;&gt;Photobucket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 文書</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/office/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/office/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;投影片&#34;&gt;投影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/&#34;&gt;SlideShare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://slides.com/&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/markdalgleish/bespoke.js&#34;&gt;Bespoke.js - DIY Presentation Micro-Framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 分析</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/analysis/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/analysis/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;流量&#34;&gt;流量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jimmysu.logdown.com/posts/297498-google-analytics-could-not-do&#34;&gt;Google Analytics 網頁分析做不到的事 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gs.statcounter.com/&#34;&gt;StatCounter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;監控&#34;&gt;監控&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hyperspin.com/zhtw/&#34;&gt;Hyperspin - Free Website Monitoring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://uptimerobot.com/&#34;&gt;Uptime Robot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://uptimebutler.com/&#34;&gt;UptimeButler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;短網址&#34;&gt;短網址&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://goo.gl/&#34;&gt;goo.gl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitly.com/&#34;&gt;bit.ly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;追蹤網址產生器&#34;&gt;追蹤網址產生器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/analytics/answer/1033867?hl=zh-Hant&#34;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/business/google-analytics/build-your-url&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 圖表</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/chart/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/chart/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cacoo.com/lang/zh_tw/&#34;&gt;Cacoo - 即時協作線上製作圖表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 客服</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/customer-service/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/customer-service/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zopim.com/&#34;&gt;Zopim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 專案管理</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/project-management/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/project-management/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;內部溝通&#34;&gt;內部溝通&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hipchat.com/&#34;&gt;HipChat&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;客戶溝通&#34;&gt;客戶溝通&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://slack.com/&#34;&gt;Slack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;程式整合部署&#34;&gt;程式整合部署&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://joel-zhong.logdown.com/posts/545549/setup-ci-server-using-jenkins&#34;&gt;架設CI Server(Jenkins)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: CDN (content delivery network)</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/cdn/</link>
+      <pubDate>Thu, 22 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/cdn/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;網站&#34;&gt;網站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudflare.com/&#34;&gt;Cloudflare - The Web Performance &amp;amp; Security Company | Cloudflare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fastly.com/&#34;&gt;Fastly | The edge cloud platform behind the best of the web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;圖片&#34;&gt;圖片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.com/docs/photon/&#34;&gt;Photon | Developer Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.com/docs/photon/api/&#34;&gt;Photon API | Developer Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://imgix.com/&#34;&gt;imgix • Real-time image processing and image CDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;檢測&#34;&gt;檢測&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudflarestatus.com/&#34;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://downdetector.com/status/cloudflare&#34;&gt;Cloudflare down? Current problems and outages | Downdetector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://smokeping.4rbj4.com/smokeping/sm.cgi?filter=cloudflare;target=CDN.Cloudflare&#34;&gt;SmokePing - Cloudflare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudflarestatus.com/history.atom&#34;&gt;Cloudflare Status information is also available as an RSS feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: IP Address</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/ip/</link>
+      <pubDate>Thu, 22 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/ip/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;ip-查詢服務&#34;&gt;IP 查詢服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ipapi.co/&#34;&gt;ipapi - IP Address Location API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;IP Geolocation and Online Fraud Prevention | MaxMind&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 表單調查</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/survey-form/</link>
+      <pubDate>Thu, 22 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/survey-form/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;表單服務&#34;&gt;表單服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/forms/about/&#34;&gt;Google Forms: Free Online Surveys for Personal Use&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;可以與雲端硬碟做整合&lt;/li&gt;
+&lt;li&gt;有 Google sheet API 可以應用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.typeform.com/&#34;&gt;Typeform&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;RWD 做得比較好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.surveycake.com/&#34;&gt;SurveyCake 企業級的雲端問卷服務｜最專業的線上免費問卷平台&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他參考資料&#34;&gt;其他參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wordstream.com/blog/ws/2014/11/10/best-online-survey-tools&#34;&gt;8 Best Survey Tools: Create Awesome Surveys For Free! | WordStream&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 服務</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

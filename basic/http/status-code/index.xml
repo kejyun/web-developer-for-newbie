@@ -1,0 +1,116 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – Http Status Code 狀態碼</title>
+    <link>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/</link>
+    <description>Recent content in Http Status Code 狀態碼 on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 29 Apr 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/basic/http/status-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Basic: Http Status Code 狀態碼 2xx: Successful responses 成功回傳</title>
+      <link>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/2xx/</link>
+      <pubDate>Thu, 29 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/2xx/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status&#34;&gt;HTTP response status codes - HTTP | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://httpstatuses.com/&#34;&gt;HTTP Status Codes — httpstatuses.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic: Http Status Code 狀態碼 3xx: Redirection messages 重新導向</title>
+      <link>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/3xx/</link>
+      <pubDate>Thu, 29 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/3xx/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status&#34;&gt;HTTP response status codes - HTTP | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://httpstatuses.com/&#34;&gt;HTTP Status Codes — httpstatuses.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic: Http Status Code 狀態碼 4xx: Client error responses 使用者錯誤</title>
+      <link>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/4xx/</link>
+      <pubDate>Thu, 29 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/4xx/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;frontend messed up&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;4xx&lt;/code&gt; 這部分的狀態碼在使用者操作或傳遞參數發生錯誤時才會回傳&lt;/p&gt;
+&lt;h2 id=&#34;400-bad-request-或-422-unprocessable-entity-差異&#34;&gt;&lt;code&gt;400 Bad Request&lt;/code&gt; 或 &lt;code&gt;422 Unprocessable Entity&lt;/code&gt; 差異&lt;/h2&gt;
+&lt;h3 id=&#34;400-參數沒有傳送&#34;&gt;400 參數沒有傳送&lt;/h3&gt;
+&lt;p&gt;例如使用者資料網址是 &lt;code&gt;http://user.com/user/&amp;lt;user_id&amp;gt;&lt;/code&gt;，但發出去的請求是 &lt;code&gt;http://user.com/user/&lt;/code&gt; 沒有包含任何 &lt;code&gt;&amp;lt;user_id&amp;gt;&lt;/code&gt;，所以會回傳 &lt;code&gt;400 Bad Request&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;422-參數正確傳送但格式邏輯不對&#34;&gt;422 參數正確傳送但格式邏輯不對&lt;/h3&gt;
+&lt;p&gt;例如使用者資料網址是 &lt;code&gt;http://user.com/user/&amp;lt;user_id&amp;gt;&lt;/code&gt;，使用者 &lt;code&gt;&amp;lt;user_id&amp;gt;&lt;/code&gt; 格式是整數，所以正確請求應為 &lt;code&gt;http://user.com/user/123&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但發出去的請求是 &lt;code&gt;http://user.com/user/abc&lt;/code&gt; 網址中 &lt;code&gt;&amp;lt;user_id&amp;gt;&lt;/code&gt; 格式是錯誤的，所以會回傳 &lt;code&gt;422 Unprocessable Entity&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.quora.com/Which-HTTP-code-is-best-suited-for-validation-errors-400-or-422&#34;&gt;Which HTTP code is best suited for validation errors: 400 or 422? - Quora&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pawelpluta.com/why-should-you-return-http-422/&#34;&gt;What Is HTTP 422 And Why You Should Use It? - Paweł Pluta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.bonsai.io/article/303-api-error-422-unprocessable-entity&#34;&gt;API Error 422: Unprocessable Entity - bonsai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://evertpot.com/http/422-unprocessable-entity&#34;&gt;422 Unprocessable Entity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.keycdn.com/support/422-unprocessable-entity&#34;&gt;422 Unprocessable Entity Explained - KeyCDN Support&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/16133923/400-vs-422-response-to-post-of-data&#34;&gt;rest - 400 vs 422 response to POST of data - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.paypal.com/docs/api/reference/api-responses/&#34;&gt;Paypal API responses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kinsta.com/knowledgebase/400-bad-request/&#34;&gt;How to Fix a 400 Bad Request Error [Causes &amp;amp; Fixes]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lifewire.com/how-to-fix-a-400-bad-request-error-2617988&#34;&gt;How to Fix the 400 Bad Request Error&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status&#34;&gt;HTTP response status codes - HTTP | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://httpstatuses.com/&#34;&gt;HTTP Status Codes — httpstatuses.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic: Http Status Code 狀態碼 5xx: Server error responses 伺服器錯誤</title>
+      <link>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/5xx/</link>
+      <pubDate>Thu, 29 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/basic/http/status-code/5xx/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;backend messed up&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status&#34;&gt;HTTP response status codes - HTTP | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://httpstatuses.com/&#34;&gt;HTTP Status Codes — httpstatuses.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

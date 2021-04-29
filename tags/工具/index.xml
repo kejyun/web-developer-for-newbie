@@ -1,0 +1,93 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – 工具</title>
+    <link>https://web-developer-for-newbie.kejyun.com/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 18 Apr 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Resource: 工具</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/tool/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/tool/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;線上圖表繪圖&#34;&gt;線上圖表繪圖&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://raw.densitydesign.org/&#34;&gt;Raw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://infogr.am/&#34;&gt;Create infographics &amp;amp; online charts | infogr.am&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;編譯&#34;&gt;編譯&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://babeljs.io/&#34;&gt;Babel · The compiler for writing next generation JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 工具</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/tools/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/tools/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.layoutit.com/&#34;&gt;LayoutIt! - Interface Builder for Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;wireframemockupprototype&#34;&gt;Wireframe、Mockup、Prototype&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.figma.com/&#34;&gt;Figma: the collaborative interface design tool.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miro.com/&#34;&gt;An Online Visual Collaboration Platform for Teamwork | Miro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://balsamiq.com/&#34;&gt;Balsamiq&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.axure.com/&#34;&gt;Axure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.adobe.com/tw/products/xd.html&#34;&gt;Adobe Xd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sketchapp.com/&#34;&gt;Sketch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 工具</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/css/tool/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/css/tool/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;像素&#34;&gt;像素&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://pxtoem.com/&#34;&gt;PXtoEM.com: PX to EM conversion made simple.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;軟體&#34;&gt;軟體&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://lesscss.org/&#34;&gt;Less.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/postcss/postcss&#34;&gt;postcss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sass-lang.com/&#34;&gt;Sass: Syntactically Awesome Style Sheets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文章&#34;&gt;文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[PostCSS: th&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

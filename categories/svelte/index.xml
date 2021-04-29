@@ -1,0 +1,35 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – Svelte</title>
+    <link>https://web-developer-for-newbie.kejyun.com/categories/svelte/</link>
+    <description>Recent content in Svelte on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 17 Apr 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/categories/svelte/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Resource: Svelte</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/svelte/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/svelte/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://svelte.dev/&#34;&gt;Svelte • Cybernetically enhanced web apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

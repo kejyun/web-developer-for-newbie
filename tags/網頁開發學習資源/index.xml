@@ -1,0 +1,1670 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – 網頁開發學習資源</title>
+    <link>https://web-developer-for-newbie.kejyun.com/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90/</link>
+    <description>Recent content in 網頁開發學習資源 on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 22 Apr 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Resource: Facebook</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/social/facebook/</link>
+      <pubDate>Thu, 22 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/social/facebook/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;oglocale&#34;&gt;og:locale&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/translations/FacebookLocales.xml&#34;&gt;FacebookLocales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.facebook.com/tools/debug/sharing/&#34;&gt;Sharing Debugger - Facebook for Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.facebook.com/tools/comments/&#34;&gt;留言管理工具 - Facebook for Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: AWS </title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/aws/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/aws/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;官方&#34;&gt;官方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/&#34;&gt;Amazon Web Services (AWS)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;監控測試&#34;&gt;監控測試&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudharmony.com/speedtest-for-aws&#34;&gt;Amazon Web Services Network Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[https://status.aws.amazon.com/](AWS Service Health Dashboard)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: cors</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/debug/cors/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/debug/cors/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;corscross-origin-resource-sharing&#34;&gt;CORS(Cross-Origin Resource Sharing)&lt;/h2&gt;
+&lt;p&gt;將您要測試遠端 API 的服務網址加入下方的 &lt;code&gt;http://EXAMPLE.COM/SOME/API&lt;/code&gt; 位置，就可以至抓取到 API 的允許連線來源是什麼&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;curl -I -X OPTIONS &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Origin: http://EXAMPLE.COM&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  -H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Access-Control-Request-Method: GET&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  http://EXAMPLE.COM/SOME/API 2&amp;gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Access-Control-Allow-Origin&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;假如 API 有設定 &lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt; 的話則會顯示下方訊息，如果都沒有設定的話，就會顯示空白&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Access-Control-Allow-Origin: *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;參考資料&#34;&gt;參考資料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/exAspArk/07bbbafa2a9171b6c260989780cc0955&#34;&gt;Test CORS with cURL · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Figma</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/mockup/figma/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/mockup/figma/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;圖片&#34;&gt;圖片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=saoB8uqUAH8&#34;&gt;Figma Tutorial: Images - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hns2FUaTsBg&#34;&gt;How To CROP Image In Figma - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;frame&#34;&gt;Frame&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gaSlNKFSetI&#34;&gt;#05: Figma Frame Tips - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;元件-components&#34;&gt;元件 Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IHEh9HFBtFU&#34;&gt;Figma Tutorial: Components - Swapping and States - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.figma.com/blog/components-in-figma/&#34;&gt;Components in Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.figma.com/hc/en-us/articles/360045942953-Add-links-to-text&#34;&gt;Add links to text – Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scroll&#34;&gt;Scroll&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ST6DOO11zuA&#34;&gt;Figma Tutorial: Device Frames and Scrolling - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prototyping&#34;&gt;Prototyping&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-sAAa-CCOcg&#34;&gt;Figma Tutorial: Prototyping - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;embed-嵌入&#34;&gt;Embed 嵌入&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.figma.com/hc/en-us/articles/360039827134-Figma-Live-Embed&#34;&gt;Figma Live Embed – Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社群&#34;&gt;社群&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.figma.com/community&#34;&gt;Community – Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;套件&#34;&gt;套件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.figmacrush.com/&#34;&gt;Figma Templates, UI kits and Freebies - Free Figma resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://figmacn.com/resource/figma-crush&#34;&gt;免费的 Figma 资源、模板 | Figma 中文网（非官方）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;快捷鍵-keyboard-shortcuts&#34;&gt;快捷鍵 Keyboard Shortcuts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.figma.com/hc/en-us/articles/360040328653-Speed-up-your-workflow-with-Keyboard-Shortcuts&#34;&gt;Speed up your workflow with Keyboard Shortcuts – Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;教學&#34;&gt;教學&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=3q3FV65ZrUs&#34;&gt;Figma Tutorial - A Free UI Design/Prototyping Tool. It&amp;rsquo;s awesome. - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCQsVmhSa4X-G3lHlUtejzLA/videos&#34;&gt;Figma - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://figmachina.com/guide/&#34;&gt;开始使用 | FigmaChina：Figma 中文网，学习 Figma 从这里开始&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考文章&#34;&gt;參考文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.figma.com/hc/en-us/articles/360039832054-Frames-and-Groups&#34;&gt;Frames and Groups – Figma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Framework</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/framework/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/framework/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;laravel&#34;&gt;Laravel&lt;/h2&gt;
+&lt;h3 id=&#34;官方文件&#34;&gt;官方文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://laravel.com/&#34;&gt;Laravel - The PHP Framework For Web Artisans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://laravel.tw/&#34;&gt;Laravel - 為網頁藝術家創造的 PHP 框架&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;教學&#34;&gt;教學&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://laravel-recipes.com/&#34;&gt;Laravel Recipes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工具套件&#34;&gt;工具套件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://packalyst.com/&#34;&gt;Packalyst :: Packages for Laravel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;社群&#34;&gt;社群&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/groups/laravel.tw/&#34;&gt;Laravel 台灣 Facebook 社團&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/groups/199493136812961/&#34;&gt;PHP 台灣 Facebook 社團&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;phalconphp&#34;&gt;phalconphp&lt;/h2&gt;
+&lt;h3 id=&#34;官方文件-1&#34;&gt;官方文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://phalconphp.com/en/&#34;&gt;phalconphp - High performance PHP framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;slim&#34;&gt;Slim&lt;/h2&gt;
+&lt;h3 id=&#34;官方文件-2&#34;&gt;官方文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slimframework.com/&#34;&gt;Slim Framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;h3 id=&#34;文章&#34;&gt;文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://phpixie.com/blog/php-framework-comparison/&#34;&gt;PHP Framework Comparison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://systemsarchitect.net/performance-benchmark-of-popular-php-frameworks/&#34;&gt;Systems Architect » Performance benchmark of popular PHP frameworks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Icon</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/photo/icon/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/photo/icon/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;免費&#34;&gt;免費&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/design/icons/&#34;&gt;Material icons - Google Design&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/material-design-icons/&#34;&gt;google/material-design-icons - Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://materialdesignicons.com/&#34;&gt;Material Design Icons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://material.io/resources/icons/&#34;&gt;Icons - Material Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fontawesome.com/icons?d=gallery&#34;&gt;Icons | Font Awesome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://coreui.io/icons/&#34;&gt;Free icons - SVG, PNG, JavaScript &amp;amp; Icon Font - Over 1500 free vector icons · CoreUI Icons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://icomoon.io/&#34;&gt;❍ IcoMoon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fontello.com/&#34;&gt;Fontello - icon fonts generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font Awesome, the iconic font and CSS toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thenounproject.com/&#34;&gt;NounProject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://smarticons.co/&#34;&gt;SmartIcons - Smart SVG icon system&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://findicons.com/&#34;&gt;圖示搜尋引擎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;付費&#34;&gt;付費&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iconfinder.com/&#34;&gt;Iconfinder - 450,000+ free and premium icons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.iconsguide.com/&#34;&gt;Icons Guide · your guide to stock icons shops&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具&#34;&gt;工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.icoconverter.com/&#34;&gt;Online ICO converter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://icones.netlify.app/&#34;&gt;Icônes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://emot.es/&#34;&gt;emot.es&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: iPhone Safari</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/debug/iphone-safari/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/debug/iphone-safari/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;iphone-safari-除錯&#34;&gt;iPhone Safari 除錯&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1. 設定 iPhone&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;設定(Setting)&lt;/code&gt; &amp;gt; &lt;code&gt;Safari&lt;/code&gt; &amp;gt; &lt;code&gt;進階（Advanced）&lt;/code&gt; &amp;gt; &lt;code&gt;網頁檢視器（Web Inspector）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-iphone-safari-setting-advance.jpg&#34; alt=&#34;iPhone Safari Setting Advance&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-iphone-safari-setting-advance-web-inspector.jpg&#34; alt=&#34;iPhone Safari Setting Advance Web Inspector&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 設定 Macbook Safari&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;開啟 Macbook Safari，點選 &lt;code&gt;preferences&lt;/code&gt; 設定&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-preferences.png&#34; alt=&#34;Macbook Safari Preferences&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;Advanced&lt;/code&gt; 頁籤，勾選 &lt;code&gt;Show Develop menu in menu bar&lt;/code&gt;，就可以在最上方選單看到 &lt;code&gt;Develop&lt;/code&gt; 的選項&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-preferences-show-develop-menu.png&#34; alt=&#34;Macbook Safari Preferences Show Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 使用 Macbook Safari Web Inspector 除錯&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;將 iphone 使用 usb 線連至電腦，並開啟 iphone 的 Safari，開啟要除錯的網頁&lt;/p&gt;
+&lt;p&gt;在 Macbook Safari 的 &lt;code&gt;Develop&lt;/code&gt; 選單中可以看到自己的手機，點選要除錯的視窗標題&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-develop-menu.png&#34; alt=&#34;Macbook Safari Preferences Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在 Safari Web Inspector中，將指標移動到 Google 首頁的台灣字樣，選取整個元素&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-develop-menu-web-inspector.png&#34; alt=&#34;Macbook Safari Preferences Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到在 iphone Safari 也可以同步看到台灣字樣的元素被選取&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-develop-menu-web-inspector-iphone.jpg&#34; alt=&#34;Macbook Safari Preferences Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用 Web Inspector，將 &lt;code&gt;台灣&lt;/code&gt; 修改為 &lt;code&gt;台灣 Taiwan&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-develop-menu-web-inspector-change-text.png&#34; alt=&#34;Macbook Safari Preferences Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;修改完後，可以同步看到 iphone Safari 的文字也被修改了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/debug-macbook-safari-develop-menu-web-inspector-change-text-iphone.jpg&#34; alt=&#34;Macbook Safari Preferences Developer Menu&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/&#34;&gt;A Concise Guide to Remote Debugging on iOS, Android, and Windows Phone - Telerik Developer Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wfublog.com/2017/12/chrome-ios-remote-debug-webkit-adapter.html&#34;&gt;利用 Chrome 對 iOS 裝置進行除錯(iPhone、iPad)的絕佳方案＠WFU BLOG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: MySQL</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/database/mysql/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/database/mysql/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://it-ebooks.info/book/256/&#34;&gt;High Performance MySQL, 2nd Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=F5AlxQvya5A&amp;amp;list=PL3B743E17BCF7B958&#34;&gt;Database Design and Normalization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6pbxQQG25Jw&amp;amp;list=PL_c9BZzLwBRKHaa-qY7N-bmZYLPx3RYVB&#34;&gt;MySQL Complete Series!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=krx-w9icrkU&amp;amp;list=PL405B31DD586979DE&#34;&gt;MySQL Data Types&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;設計模式&#34;&gt;設計模式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.toadworld.com/platforms/mysql/w/wiki/6103.naming-conventions.aspx&#34;&gt;Naming Conventions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/mysql/&#34;&gt;MySQL Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: PHP</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://roadmap.sh/backend&#34;&gt;Learn to become a modern backend developer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Sublime</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/sublime/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/sublime/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;使用-sftp-即時上傳檔案&#34;&gt;使用 SFTP 即時上傳檔案&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;安裝套件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 Sublime Packages Controller 安裝 &lt;code&gt;Simple FTP Deploy&lt;/code&gt; 套件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;設定 sftp-config.json&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在專案目錄下建立 &lt;code&gt;sftp-config.json&lt;/code&gt; 檔案，並將此設定值填入到檔案中，並加入自己主機的相關設定&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;The&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;tab&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;cycle&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;through&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;settings&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;first&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;created&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Visit&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;http://wbond.net/sublime_packages/sftp/settings&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;help&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;sftp,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;ftp&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;or&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;ftps&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;sftp&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sync_down_on_open&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sync_same_age&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;主機網址&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;host&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;server.kejyun.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;帳號&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;密碼&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Port&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;port&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;22222&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;是否在儲存檔案時立即上傳檔案&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upload_on_save&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;專案目錄對應遠端路徑&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remote_path&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/home/kejyun/project/folder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;file_permissions&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;664&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dir_permissions&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;775&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;extra_list_connections&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;connect_timeout&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;keepalive&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;120&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ftp_passive_mode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ftp_obey_passive_host&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;SSH&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;金鑰&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ssh_key_file&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;~/.ssh/id_rsa&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sftp_flags&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;-F&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/path/to/ssh_config&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;preserve_modification_times&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remote_time_offset_in_hours&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remote_encoding&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remote_locale&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;allow_config_upload&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Simple%20FTP%20Deploy&#34;&gt;Simple FTP Deploy - Packages - Package Control&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 中文字形</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/font/chinese/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/font/chinese/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;中文字形&#34;&gt;中文字形&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.google.com/get/noto/#/family/noto-sans-hant&#34;&gt;思源黑體&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 主機</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/hosting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;hosting&#34;&gt;Hosting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/&#34;&gt;Amazon Web Services (AWS)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudharmony.com/speedtest-for-aws&#34;&gt;Amazon Web Services Network Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform (GCP)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://azure.microsoft.com/zh-tw/&#34;&gt;Microsoft Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linode.com/&#34;&gt;Linode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.heroku.com/&#34;&gt;Heroku&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.vultr.com/&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.openshift.com/&#34;&gt;OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.parse.com/&#34;&gt;Parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hostinger.com.hk/&#34;&gt;Hostinger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.serverloft.de/&#34;&gt;serverloft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.noip.com/&#34;&gt;No-IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.godaddy.com/&#34;&gt;Godaddy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssl&#34;&gt;SSL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ssls.com/&#34;&gt;SSL Certificates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/letsencrypt/letsencrypt&#34;&gt;letsencrypt github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Gas_sSB-5SU&#34;&gt;Let&amp;rsquo;s Encrypt Demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.startssl.com/&#34;&gt;StartSSL™ Certificates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sslforfree.com/&#34;&gt;SSL For Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ssl.comodo.com/&#34;&gt;Comodo SSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.symantec.com/zh/tw/ssl-certificates/&#34;&gt;Symantec SSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tw.godaddy.com/web-security/ssl-certificate&#34;&gt;SSL 憑證 GoDaddy TW&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;websites-builder&#34;&gt;Websites Builder&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.weebly.com/&#34;&gt;Weebly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wix.com/&#34;&gt;WIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://squarespace.com/&#34;&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jimdo.com/index.php&#34;&gt;Jimdo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webydo.com/&#34;&gt;Webydo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.strikingly.com/&#34;&gt;Strikingly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webnode.tw/personal-websites/&#34;&gt;Webnode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 學習資源</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/node-js/learning-resource/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/node-js/learning-resource/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;官方&#34;&gt;官方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社群&#34;&gt;社群&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/groups/node.js.tw/&#34;&gt;node.js台灣 - Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nodejs.tw/&#34;&gt;Node.js Taiwan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;教學網站&#34;&gt;教學網站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://nodeschool.io/&#34;&gt;NodeSchool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/nodejs/&#34;&gt;NodeJS Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;投影片&#34;&gt;投影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://duncanhsieh.github.io/presentation-realtime-web-apps-2015/&#34;&gt;Web 的即時互動怎麼玩？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 學習資源</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/python/learning-resource/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/python/learning-resource/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://code.tutsplus.com/series/python-from-scratch--net-20566&#34;&gt;Python from Scratch - Tuts+ Code Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udacity.com/course/cs101&#34;&gt;Intro to Computer Science &amp;amp; Programming Course - Udacity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html&#34;&gt;Django Girls 學習指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 文件</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/linux/document/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/linux/document/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/linux/&#34;&gt;Linux Command Line Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 編輯器</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;編輯器軟體&#34;&gt;編輯器軟體&lt;/h1&gt;
+&lt;h2 id=&#34;桌機&#34;&gt;桌機&lt;/h2&gt;
+&lt;h3 id=&#34;免費&#34;&gt;免費&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sublimetext.com/3&#34;&gt;Sublime Text 3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jdc0589/CaseConversion&#34;&gt;大小寫文字樣式轉換&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/&#34;&gt;Atom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://netbeans.org/&#34;&gt;NetBeans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://eclipse.org/downloads/&#34;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://notepad-plus-plus.org/&#34;&gt;Notepad ++&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;付費&#34;&gt;付費&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/phpstorm/&#34;&gt;PHP IDE :: JetBrains PhpStorm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;線上&#34;&gt;線上&lt;/h2&gt;
+&lt;h3 id=&#34;前端&#34;&gt;前端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jsbin.com/&#34;&gt;JS Bin - Collaborative JavaScript Debugging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://codepen.io/&#34;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jsfiddle.net/&#34;&gt;jsFiddle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tinkerbin.heroku.com/&#34;&gt;Tinkerbin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pastebin.com/&#34;&gt;Pastebin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;資料庫&#34;&gt;資料庫&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sqlfiddle.com/&#34;&gt;SQL Fiddle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;後端&#34;&gt;後端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://codepad.viper-7.com/&#34;&gt;codepad - PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://phpfiddle.org/&#34;&gt;PHP Fiddle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rubyfiddle.com/&#34;&gt;RUBY Fiddle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://repl.it/&#34;&gt;repl.it - Online REPL, Compiler &amp;amp; IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dooccn.com/&#34;&gt;代码在线编辑,代码在线运行,在线写代码工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;文件&#34;&gt;文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackpad.com/&#34;&gt;Hackpad&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;虛擬主機&#34;&gt;虛擬主機&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://koding.com/Home&#34;&gt;Koding | Say goodbye to your localhost and code in the cloud.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 討論社群</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/learning-resource/forum/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/learning-resource/forum/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;程式&#34;&gt;程式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/&#34;&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社群&#34;&gt;社群&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/groups/f2e.tw/&#34;&gt;Front-End Developers Taiwan - Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www2.f2e.tw/&#34;&gt;Front-End 台灣&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/iCoding.co&#34;&gt;iCoding.co - Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 轉換 JSON / YAML / TOML</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/transform/json-yaml-toml/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/transform/json-yaml-toml/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;轉換工具&#34;&gt;轉換工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://toolkit.site/format.html&#34;&gt;Data Format Converter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@WeZZard/json-%E5%B0%B1%E5%A4%A0%E4%BA%86-%E7%88%B2%E4%BB%80%E9%BA%BC%E9%82%84%E8%A6%81-toml-%E5%92%8C-yaml-9f0a288dcdbf&#34;&gt;JSON 就夠了，爲什麼還要 TOML 和 YAML？. 最近研究 Rust 和 CI，被迫瞭解了 TOML 和… | by WeZZard | Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 配色</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/color/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/color/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;色彩選擇&#34;&gt;色彩選擇&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://color.adobe.com/explore&#34;&gt;Adobe Color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kuler.adobe.com/zh/explore/newest/&#34;&gt;Adobe Kuler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.colorhexa.com/&#34;&gt;ColorHexa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://coolors.co/&#34;&gt;Coolors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://paletton.com/&#34;&gt;Paletton - The Color Scheme Designer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Framework</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/css/framework/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/css/framework/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;framework&#34;&gt;Framework&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bootsnipp.com/&#34;&gt;Bootstrap snippets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://coderthemes.com/minton_2.1/material/index.html&#34;&gt;Minton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.getmdl.io/&#34;&gt;Material Design Lite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://getuikit.com/&#34;&gt;UIkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://foundation.zurb.com/&#34;&gt;Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://purecss.io/&#34;&gt;Pure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amazeui.org/&#34;&gt;Amaze UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amazeui.org/react/&#34;&gt;Amaze UI React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://material-ui.com/&#34;&gt;Material UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://concisecss.com/&#34;&gt;Concise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://storybook.js.org/&#34;&gt;Storybook: UI component explorer for frontend developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mobile-framework&#34;&gt;Mobile Framework&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.idangero.us/framework7/&#34;&gt;Framework7 - Full Featured HTML Framework For Building iOS7 Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ionicframework.com/&#34;&gt;Ionic: Advanced HTML5 Hybrid Mobile App Framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;icon--font&#34;&gt;Icon &amp;amp; Font&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font Awesome, the iconic font and CSS toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://pikock.github.io/bootstrap-magic/&#34;&gt;Bootstrap Magic : Twitter bootstrap themes generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLMvLDJ7usmZB-Mu4kNB-Qtr_1serQjfti&#34;&gt;Bootstrap 3 Responsive Tech Site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考設計&#34;&gt;參考設計&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://startbootstrap.com/&#34;&gt;Start Bootstrap - Free Bootstrap Themes and Templates&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;整理比較&#34;&gt;整理比較&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://usablica.github.io/front-end-frameworks/compare.html&#34;&gt;CSS Front-end Frameworks with comparison - By usabli.ca&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Framework</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: HTML</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/html/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/html/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: React</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/react/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/react/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;官方網站&#34;&gt;官方網站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://facebook.github.io/react-native/&#34;&gt;React Native | A framework for building native apps using React&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社群&#34;&gt;社群&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/groups/reactjs.tw/&#34;&gt;ReactJS.tw - Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.facebook.com/videos/786462671439502/react-js-conf-2015-keynote-introducing-react-native-/&#34;&gt;React.js Conf 2015 Keynote - Introducing React Native&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enaqx/awesome-react&#34;&gt;Awesome React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ele828/react-native-guide&#34;&gt;React-Native學習指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://roadmap.sh/react&#34;&gt;React Developer Roadmap: Learn to become a React developer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文章&#34;&gt;文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.raywenderlich.com/99473/introducing-react-native-building-apps-javascript&#34;&gt;React Native Tutorial: Building Apps with JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 學習資源</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/html/learning-resource/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/html/learning-resource/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLMvLDJ7usmZDSg1z0X--3qz38IHjdieXR&#34;&gt;Learn HTML/CSS by Coder&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=bWPMSSsVdPk&#34;&gt;Learn HTML in 12 Minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KJ13lX20FqU&#34;&gt;Learn More HTML in 12 Minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://webdesign.tutsplus.com/courses/30-days-to-learn-html-css&#34;&gt;30 Days to Learn HTML and CSS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/&#34;&gt;Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zealdocs.org/&#34;&gt;Zeal - offline API documentation browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/&#34;&gt;W3Schools Online Web Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/html/&#34;&gt;HTML Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/html-dom/&#34;&gt;HTML-DOM Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;練習&#34;&gt;練習&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.codecademy.com/tracks/web/&#34;&gt;HTML &amp;amp; CSS | Codecademy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 範本</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/html/example/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/html/example/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;範本&#34;&gt;範本&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://html5boilerplate.com/&#34;&gt;HTML5 Boilerplate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 軟體</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/git/software/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/git/software/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;fork&#34;&gt;Fork&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-fork.com/&#34;&gt;Fork - a fast and friendly git client for Mac and Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sourcetree&#34;&gt;SourceTree&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html&#34;&gt;Set up an SSH key - Atlassian Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Email</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/email/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/email/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;email-服務&#34;&gt;Email 服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mandrill.com/&#34;&gt;Mandrill - Transactional Email from MailChimp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mailgun.com/&#34;&gt;Mailgun - Transactional Email API Service for Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendgrid.com/&#34;&gt;SendGrid - Email Delivery &amp;amp; Transactional Email Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mailchimp.com/&#34;&gt;MailChimp - Send Better Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/tw/ses/&#34;&gt;AWS - Amazon Simple Email Service (SES) – 以雲端為基礎的電子郵件服務&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;簡訊服務&#34;&gt;簡訊服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.afreesms.com/freesms/&#34;&gt;Send Free SMS Worldwide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: PostgreSQL</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/database/postgresql/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/database/postgresql/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;文章&#34;&gt;文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.postgresql.tw/&#34;&gt;簡介 - PostgreSQL 中文使用手冊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社群&#34;&gt;社群&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://postgresql.tw/&#34;&gt;PostgreSQL台灣使用者社群&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;軟體&#34;&gt;軟體&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dbeaver.io/&#34;&gt;DBeaver Community | Free Universal Database Tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;官方&#34;&gt;官方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL: The world&amp;rsquo;s most advanced open source database&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Python</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/python/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/python/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://roadmap.sh/backend&#34;&gt;Learn to become a modern backend developer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 免費圖片</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/photo/free-photo/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/photo/free-photo/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;一般&#34;&gt;一般&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://picjumbo.com/&#34;&gt;picjumbo — totally free photos for your commercial &amp;amp; personal works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unsplash.com/&#34;&gt;Beautiful Free Images &amp;amp; Pictures | Unsplash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pexels.com/zh-tw/&#34;&gt;免費圖庫相片 · Pexels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://subtlepatterns.com/&#34;&gt;Subtle Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 函式庫</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/library/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/library/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;圖表繪圖&#34;&gt;圖表繪圖&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://d3js.org/&#34;&gt;D3.js - Data-Driven Documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://echarts.apache.org/zh/index.html&#34;&gt;Apache ECharts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://threejs.org/&#34;&gt;three.js - Javascript 3D library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amcharts.com/&#34;&gt;amCharts - JavaScript Charts and Maps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://p5js.org/&#34;&gt;p5.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.videojs.com/&#34;&gt;Video.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html-dom-文件控制&#34;&gt;HTML DOM 文件控制&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jquery.com/&#34;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jqueryui.com/&#34;&gt;jQuery UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;函式庫&#34;&gt;函式庫&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.javascripting.com/&#34;&gt;JSDB - The Database of JavaScript Libraries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;時間&#34;&gt;時間&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/d3/d3-time&#34;&gt;d3-time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 小技巧</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/trick/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/trick/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;程式註解&#34;&gt;程式註解&lt;/h2&gt;
+&lt;h3 id=&#34;搜尋關鍵字gotcha-keywords&#34;&gt;搜尋關鍵字﹝Gotcha Keywords﹞&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TODO: 主題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;表示這裡還有工作尚待完成，不要忘記了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BUG: [bugid] 主題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;表示這裡有一個已知的臭蟲，並加以解釋，或許再給一個臭蟲編號。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KLUDGE:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;當您很笨拙的完成某件事情時，就明白的說出來，並說明您下次想採取 怎樣不同的方法去做，如果您還有時間的話。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TRICKY:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;告訴別人以下的程式碼是非常有技巧的，請不要不加思索的修改它。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WARNING:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;要注意某件事情。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PARSER:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;偶爾您必須設法解決程式語言剖析器所產生的問題。請加以註明。這個剖析器的問題終會被修正。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ATTRIBUTE: value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這是個一般格式，說明該註解所內含的屬性。您可以創造您自己的屬性，它們也會被析取出來。&lt;/p&gt;
+&lt;p&gt;將搜尋關鍵字放在註解的最前面，亦即第一個符號。
+註解也許會包含好幾行，然而第一行必須是獨立而有意義的簡要說明。
+作者的名字與註解的日期也應該寫在註解裡面。
+這兩項資訊雖然也可以在原始碼的倉儲裝置中找到，但是這或許需要一段時間才能查明這段註解到底是誰、在什麼時後所加上去的。
+通常這會浪費許多時間去搜尋。 將日期資訊寫在註解裡面，可以讓其他程式設計師在做決定時有所依據。
+將作者資訊寫在註解裡面，可以讓我們知道應該找誰問問題。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;關鍵字&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@access&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;變數可存取的權限 (Example: Public or Private)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@api&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;爲第三方來源的變數&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@author&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數建立者名稱 (Example: @author Barry &amp;lt;riceooks[at]gmail.com&amp;gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@category&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數的分類別名，可能某些工具會利用這個來分類你的方法，使好幾個方法歸為某一類，方便做辨識使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@copyright&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數的版權宣告 (Example: @copyright 隨手寫有限公司 &lt;a href=&#34;http://www.barryblogs.com&#34;&gt;www.barryblogs.com&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@deprecated&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代表不建議使用的函數，未來可能會移除這個方法使用到的某個變數，或整個方法都被刪除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@example&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代表這個函數使用方式可以參考某個資料，可以使用檔案位置或網址 (Example: @example &lt;a href=&#34;http://www.barryblogs.com/&#34;&gt;http://www.barryblogs.com/&lt;/a&gt; )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@filesource&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;這個函數所需的來源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@global&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數內有使用的全域變數註解 (Example: @global Number $user_id)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ignore&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代表這個函數或區域可以被忽略，通常會加上說明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@internal&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代表這個函數或區域可能只給予內部使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@license&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;此函數可能是含有某個版權或許可 (Example: @license &lt;a href=&#34;http://opensource.org/licenses/gpl-license.php&#34;&gt;http://opensource.org/licenses/gpl-license.php&lt;/a&gt; GNU Public License)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@link&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可能與某個網站有關係 (Example: @link &lt;a href=&#34;http://www.barryblogs.com/&#34;&gt;http://www.barryblogs.com/&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@method&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數有使用的方法 (Example: @method Array @this-&amp;gt;getCategories() or @method String getUserName())&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@package&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;利用這個註解來達到細部分層結構 (Example: @package PSR\Documentation\API or @package PSR\Documentation\Doc)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@param&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數要帶入的參數 (Example: @param String|Number $username)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@property&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果這是一個類別的函數，在類別建構時通常會指定初始化參數，而這個函數可能會使用到某些初始化後的參數，稱之為屬性 (Example: @property Resource|Boolean $mysql_connect)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@return&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數最後的回傳值或形態 (Example: @return Array|Object|Boolean)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@see&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數參照或關聯的方法 (Example: @see Class User or @see &lt;a href=&#34;http://www.barryblogs.com/&#34;&gt;BarryBlogs&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@since&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數內某個使用的變數由哪個版本變動 (Example: @since v1.3376a $user_nickname )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@source&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;這個比較特別，在函數中可以標示從 m 至 n 行 是做什麼事情 (Example: @source 14 21 Get user data)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@static&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;靜態變數的註解 (Example: @static String $lang = &amp;lsquo;zh_TW&amp;rsquo;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@subpackage&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;利用這個註解來達到細部分層子結構，通常會同時使用 @package，可以參考上面的@package (Example: @package PSR,  @subpackage Documentation\API)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@throws&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;例外處理的註解，有多種例外處理的方式，每種方式都不同 (Example: @throws InvalidArgumentException if the provided argument is not of type &amp;lsquo;array&amp;rsquo;, @throws Exception other&amp;hellip;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@todo&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;計劃要進行的項目描述，一般應該會使用文字描述&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@uses&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代表某個元素可能與其它結構有利用關係 (Example: @uses MyClass::$items to retrieve the count from)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@var&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;變數(物件成員變數)的形態或描述 (Example: @var Boolean)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@version&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函數的版本 (Example: v1.3258c)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;範例&#34;&gt;範例&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;php&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      函數名稱
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      函數描述(有些會含HTML代碼)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @access                 變數可存取的權限 (Example: Public or Private)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @api                    爲第三方來源的變數
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @author                 函數建立者名稱 (Example: @author Barry &amp;lt;riceooks[at]gmail.com&amp;gt;)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @category               函數的分類別名，可能某些工具會利用這個來分類你的方法，使好幾個方法歸為某一類，方便做辨識使用
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @copyright              函數的版權宣告 (Example: @copyright 隨手寫有限公司 www.barryblogs.com)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @deprecated             代表不建議使用的函數，未來可能會移除這個方法使用到的某個變數，或整個方法都被刪除
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @example                代表這個函數使用方式可以參考某個資料，可以使用檔案位置或網址 (Example: @example http://www.barryblogs.com/)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @filesource             這個函數所需的來源
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @global                 函數內有使用的全域變數註解 (Example: @global Number $user_id)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @ignore                 代表這個函數或區域可以被忽略，通常會加上說明
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @internal               代表這個函數或區域可能只給予內部使用
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @license                此函數可能是含有某個版權或許可 (Example: @license http://opensource.org/licenses/gpl-license.php GNU Public License)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @link                   可能與某個網站有關係 (Example: @link http://www.barryblogs.com/)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @method                 函數有使用的方法 (Example: @method Array @this-&amp;gt;getCategories() or @method String getUserName())
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @package                利用這個註解來達到細部分層結構 (Example: @package PSR\Documentation\API or @package PSR\Documentation\Doc)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @param                  函數要帶入的參數 (Example: @param String|Number $username)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @property               如果這是一個類別的函數，在類別建構時通常會指定初始化參數，而這個函數可能會使用到某些初始化後的參數，稱之為屬性 (Example: @property Resource|Boolean $mysql_connect)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @return                 函數最後的回傳值或形態 (Example: @return Array|Object|Boolean)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @see                    函數參照或關聯的方法 (Example: @see Class User or @see &amp;lt;a href=&amp;#34;http://www.barryblogs.com/&amp;#34;&amp;gt;BarryBlogs&amp;lt;/a&amp;gt;)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @since                  函數內某個使用的變數由哪個版本變動 (Example: @since v1.3376a $user_nickname )
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @source                 這個比較特別，在函數中可以標示從 m 至 n 行 是做什麼事情 (Example: @source 14 21 Get user data)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @static                 靜態變數的註解 (Example: @static String $lang = &amp;#39;zh_TW&amp;#39;)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @subpackage             利用這個註解來達到細部分層子結構，通常會同時使用 @package，可以參考上面的@package (Example: @package PSR,  @subpackage Documentation\API)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @throws                 例外處理的註解，有多種例外處理的方式，每種方式都不同 (Example: @throws InvalidArgumentException if the provided argument is not of type &amp;#39;array&amp;#39;, @throws Exception other...)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @todo                   計劃要進行的項目描述，一般應該會使用文字描述
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @uses                   代表某個元素可能與其它結構有利用關係 (Example: @uses MyClass::$items to retrieve the count from)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @var                    變數(物件成員變數)的形態或描述 (Example: @var Boolean)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     *      @version                函數的版本 (Example: v1.3258c)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ClassName&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AnotherClass&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 影片</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/learning-resource/video/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/learning-resource/video/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pluralsight.com/&#34;&gt;Pluralsight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.codecademy.com/&#34;&gt;Code Academy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/&#34;&gt;Code School&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udacity.com/&#34;&gt;Udacity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://teamtreehouse.com/&#34;&gt;Treehouse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutsplus.com/&#34;&gt;Tuts+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.lynda.com/&#34;&gt;Lynda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://leveluptuts.com/&#34;&gt;Level Up Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.imooc.com/&#34;&gt;慕课网-国内最大的IT技能学习平台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.skillshare.com/&#34;&gt;Skillshare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 排程工作 (CronJob)</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/linux/cronjob/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/linux/cronjob/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;視覺化&#34;&gt;視覺化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.corntab.com/pages/crontab-gui&#34;&gt;A visual crontab editor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 文件</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/document/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/document/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;api-文件&#34;&gt;API 文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://swagger.io/&#34;&gt;API Documentation &amp;amp; Design Tools for Teams | Swagger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;共同作業&#34;&gt;共同作業&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackpad.com/&#34;&gt;Hackpad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/&#34;&gt;Google Drive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;心智圖&#34;&gt;心智圖&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.xmind.net/&#34;&gt;xmind&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;流程圖&#34;&gt;流程圖&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.draw.io/&#34;&gt;Draw.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文書&#34;&gt;文書&lt;/h2&gt;
+&lt;h3 id=&#34;markdown&#34;&gt;Markdown&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ulyssesapp.com/&#34;&gt;Ulysses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kapeli.com/dash&#34;&gt;Dash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 英文字型</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/font/english/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/font/english/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;英文字型&#34;&gt;英文字型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/fonts&#34;&gt;Google Fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://madmalik.github.io/mononoki/&#34;&gt;mononoki Fonts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 設計模式</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/design-pattern/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/ui-ux-design/design-pattern/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;web&#34;&gt;Web&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://patterntap.com/&#34;&gt;The Main Tap › PatternTap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;手機&#34;&gt;手機&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pttrns.com/&#34;&gt;Pttrns - Mobile UI Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rwd&#34;&gt;RWD&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mediaqueri.es/&#34;&gt;Media Queries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: CSS</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/css/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/css/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Vue</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/vue/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/framework/vue/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 套件</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/css/plugin/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/css/plugin/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;正規化&#34;&gt;正規化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://necolas.github.io/normalize.css/&#34;&gt;normalize.css&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;動畫特效&#34;&gt;動畫特效&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leaverou.github.io/animatable/&#34;&gt;Animatable: One property, two values, endless possibilities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://elrumordelaluz.github.io/csshake/&#34;&gt;CSS Shake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;載入中特效&#34;&gt;載入中特效&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://projects.lukehaas.me/css-loaders/&#34;&gt;Single Element CSS Spinners&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;滑鼠特效&#34;&gt;滑鼠特效&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ianlunn.github.io/Hover/&#34;&gt;Hover.css - A collection of CSS3 powered hover effects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 學習資源</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/git/learning-resource/</link>
+      <pubDate>Sat, 17 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/git/learning-resource/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;學習資源&#34;&gt;學習資源&lt;/h1&gt;
+&lt;h2 id=&#34;git-repo&#34;&gt;Git Repo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/&#34;&gt;GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;教學&#34;&gt;教學&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://backlogtool.com/git-guide/cn/intro/intro1_1.html&#34;&gt;猴子都能懂的GIT入門 - 入門篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://backlogtool.com/git-guide/cn/stepup/stepup1_1.html&#34;&gt;猴子都能懂的GIT入門 - 高級篇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/courses/try-git&#34;&gt;Try Git - Code School&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/courses/git-real&#34;&gt;Interactive Git Tutorial - Code School&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/courses/mastering-github&#34;&gt;Mastering GitHub - Code School&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/robertgreen/2017/08/01/visual-studio-toolbox-git-fundamentals/&#34;&gt;Visual Studio Toolbox: Git Fundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;練習&#34;&gt;練習&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://try.github.io/&#34;&gt;Code School - Try Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文章&#34;&gt;文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_tw/&#34;&gt;Git Magic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/zh-tw/&#34;&gt;Git - Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pcottle.github.io/learnGitBranching/&#34;&gt;Learn Git Branching&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://overapi.com/git/&#34;&gt;Git Cheat Sheet | OverAPI.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;軟體&#34;&gt;軟體&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;SourceTree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gitup.co/&#34;&gt;GitUp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.google.com/p/tortoisegit/&#34;&gt;TortoiseGit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Brackets</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/brackets/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/code-editor/brackets/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;使用-sftp-即時上傳檔案&#34;&gt;使用 SFTP 即時上傳檔案&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1. 安裝 SFtpUpload 套件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/brackets-extension-manager.png&#34; alt=&#34;Brackets Extension Manager&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/brackets-extension-manager-SFtpUpload.png&#34; alt=&#34;Brackets Extension Manager SFtpUpload&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 開啟 SFtpUpload 設定 Pannel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;點選編輯器右方的向上按鈕，可以開啟 SFTP Pannel，點選 &lt;code&gt;Server Setup&lt;/code&gt; 設定連線主機&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/brackets-extension-manager-SFtpUpload-pannel.png&#34; alt=&#34;SFtpUpload Pannel&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 設定 SFtpUpload 連線主機&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;勾選 &lt;code&gt;Upload On Save&lt;/code&gt; 可以在儲存檔案後立即上傳檔案&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/brackets-extension-manager-SFtpUpload-pannel-setting.png&#34; alt=&#34;SFtpUpload Pannel SFTP Setting&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://brackets.io/&#34;&gt;Brackets - A modern, open source code editor that understands web design.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bigeyex/brackets-sftp-upload&#34;&gt;bigeyex/brackets-sftp-upload: SFTP upload plugin for brackets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: MongoDB</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/database/mongodb/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/database/mongodb/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udacity.com/course/ud032&#34;&gt;Data Wrangling with MongoDB Online Course - Udacity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Node.js</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/node-js/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/node-js/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://roadmap.sh/backend&#34;&gt;Learn to become a modern backend developer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: Redis</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/database/redis/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/database/redis/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;gui-管理工具&#34;&gt;GUI 管理工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/luin/medis&#34;&gt;GitHub - luin/medis: 💻 Medis is a beautiful, easy-to-use Mac database management application for Redis.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qishibo/AnotherRedisDesktopManager/&#34;&gt;GitHub - qishibo/AnotherRedisDesktopManager: 🚀🚀🚀A faster, better and more stable redis desktop manager, compatible with Linux, windows, mac. What&amp;rsquo;s more, it won&amp;rsquo;t crash when loading a large number of keys.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://redisdesktop.com/&#34;&gt;Redis Desktop Manager - Redis GUI management tool for Windows, macOS, iPad and Linux.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 其他字形</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/font/others/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/font/others/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;免費字型&#34;&gt;免費字型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.google.com/fonts/&#34;&gt;Google Fonts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 圖片</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/service/photo/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/service/photo/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;圖片服務&#34;&gt;圖片服務&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://imgur.com/&#34;&gt;Imgur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://photobucket.com/&#34;&gt;Photobucket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 套件</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/packages/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/backend-program/php/packages/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;coding-style&#34;&gt;Coding Style&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://styleci.io/&#34;&gt;StyleCI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;websockets&#34;&gt;WebSockets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://socketo.me/&#34;&gt;Ratchet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;seo&#34;&gt;SEO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/asika32764/php-sitemap&#34;&gt;PHP Sitemap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 套件</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/javascript/plugin/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/javascript/plugin/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;檢測&#34;&gt;檢測&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://modernizr.com/&#34;&gt;Modernizer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;訊息通知&#34;&gt;訊息通知&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://fabien-d.github.io/alertify.js/&#34;&gt;Alertify.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lightbox&#34;&gt;LightBox&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://lokeshdhakar.com/projects/lightbox2/&#34;&gt;Lightbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;狀態&#34;&gt;狀態&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://usablica.github.io/progress.js/&#34;&gt;Progress.js - Themeable progress bar library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;字串處理&#34;&gt;字串處理&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/websanova/js-url&#34;&gt;js-url&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zdfs.github.io/toscani/paymentInfo/index.html&#34;&gt;Payment Info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特效&#34;&gt;特效&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jackrugile.com/jrumble/&#34;&gt;jRumble | A jQuery Plugin That Rumbles Elements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;打字&#34;&gt;打字&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mattboldt.com/demos/typed-js/&#34;&gt;jQuery Animated Typing with Typed.js | by Matt Boldt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://albburtsev.github.io/jquery.typist/&#34;&gt;jQuery.typist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://plugins.jquery.com/typewriter/&#34;&gt;jQuery Typewriter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.davidcrawford.co/typist-jquery/&#34;&gt;Typist jQuery Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;偵測&#34;&gt;偵測&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tomgco/gyro.js&#34;&gt;gyro.js - 手機加速器＆陀螺儀偵測&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1ix03u9Zqg0&#34;&gt;iPhone Gyro CSS 3 node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;效能&#34;&gt;效能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jsperf.com/&#34;&gt;jsPerf — JavaScript performance playground&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;除錯&#34;&gt;除錯&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://console.re/try&#34;&gt;Console.Re | Try Remote Javascript Development Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Resource: 專案管理</title>
+      <link>https://web-developer-for-newbie.kejyun.com/resource/software/project-management/</link>
+      <pubDate>Sun, 18 Apr 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/resource/software/project-management/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;一般專案管理&#34;&gt;一般專案管理&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://trello.com/&#34;&gt;Trello&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://asana.com/&#34;&gt;Asana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miro.com/&#34;&gt;Miro | Free Online Collaborative Whiteboard Platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.redmine.org/&#34;&gt;Redmine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;看板資料管理&#34;&gt;看板資料管理&lt;/h2&gt;
+&lt;h2 id=&#34;敏捷開發&#34;&gt;敏捷開發&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.thoughtworks.com/mingle/&#34;&gt;Project Management Software | Mingle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/software/jira&#34;&gt;JIRA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.targetprocess.com/&#34;&gt;Targetprocess&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本控制&#34;&gt;版本控制&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.git-tower.com/&#34;&gt;Tower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;Source Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/product/server&#34;&gt;Bitbucket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
