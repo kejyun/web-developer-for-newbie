@@ -1,0 +1,404 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – Auth</title>
+    <link>https://web-developer-for-newbie.kejyun.com/tags/auth/</link>
+    <description>Recent content in Auth on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 May 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/tags/auth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Advanced: JWT Token 記住登入帳號 Remember me</title>
+      <link>https://web-developer-for-newbie.kejyun.com/advanced/auth/remember-me/jwt-token/</link>
+      <pubDate>Tue, 18 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/advanced/auth/remember-me/jwt-token/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;jwt-token-沒有提供-remember-token-的功能&#34;&gt;JWT Token 沒有提供 Remember Token 的功能&lt;/h2&gt;
+&lt;p&gt;若要在 JWT Token 提供 Remember Token 的功能，可以將儲存在 Cookie 的 JWT Token 時間效期拉很長，當 Cookie 存在就可以正常的去做驗證登入功能&lt;/p&gt;
+&lt;h2 id=&#34;使用-jwt-token-refresh-token-機制&#34;&gt;使用 JWT Token Refresh Token 機制&lt;/h2&gt;
+&lt;p&gt;JWT Token 會產生一個有效期的 Token，而 Token 中會包含以下欄位&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;欄位&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;iat&lt;/td&gt;
+&lt;td&gt;Token 產生時間&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exp&lt;/td&gt;
+&lt;td&gt;Token 最後可用時間，在此時間內 token 都可以重新 refresh 取得&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nbf&lt;/td&gt;
+&lt;td&gt;Token 有效時間，超過此時間 Token 會失效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/*&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;eyJ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;eXAiOiJKV&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;QiLCJhbGciOiJIUzI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NiJ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;.eyJpc&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MiOiJodHRwczovL&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;F&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;dGgua&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;VqeXVuLmNvbS&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;hcGkvdjEvdXNlci&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;hdXRoL&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;xvZ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;luIiwiaWF&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;IjoxNjIxMzIyMDg&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;LCJleHAiOjE&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MjE&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MDg&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ODYsIm&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;iZiI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MTYyMTMyMjA&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NiwianRpIjoiSzRzbzNmeWJsMjBjUnFjeCIsInN&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;YiI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;InVzZXItc&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;V&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;azU&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ODN&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;bXY&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;YXV&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;In&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;.EeB&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;mb-XWU&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;Yhq&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;UroKeI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;SNiiC&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;taa&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;Jo&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;FF&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;jzrhc&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;*/&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iss&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://auth.kejyun.com/api/v1/user/auth/login&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621322086&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;exp&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621408486&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621322086&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;K4so3fybl20cRqcx&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sub&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user-seuk5883zmv5auu&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;exp&lt;/code&gt; 欄位時間會大於或等於 &lt;code&gt;nbf&lt;/code&gt;時間，當時間超過 &lt;code&gt;nbf&lt;/code&gt; 時間時此 Token 會無法使用，但若 &lt;code&gt;nbf&lt;/code&gt; 時間在 &lt;code&gt;exp&lt;/code&gt; 時間內，可以重新使用 refresh 的方式再取得有效的 Token，直到時間超過 &lt;code&gt;exp&lt;/code&gt; 為止&lt;/p&gt;
+&lt;p&gt;此 Token 會透過 JWT 金鑰去驗證資料是否有被串改過，所以可以保護 Token 的安全性，所以可以將 JWT Token 的過期時間 &lt;code&gt;nbf&lt;/code&gt; 設定為比較短，而 JWT Token 可用時間 &lt;code&gt;exp&lt;/code&gt; 設定長一點，當 Token 過期可以重新得去
+Refresh Token 就可以持續不斷延長 Token 可用時間&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步驟&lt;/th&gt;
+&lt;th&gt;流程&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;傳入帳號密碼驗證&lt;/td&gt;
+&lt;td&gt;驗證帳號密碼是否正確，資料庫是否有此帳號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;記錄使用者 user_id 到 JWT Token Cookie&lt;/td&gt;
+&lt;td&gt;告訴前端此使用者的身份是誰，之後會透過這個含有 user_id 的 JWT Token cookie 做驗證&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;透過含有 user_id 的 JWT Token Cookie 做其他驗證請求&lt;/td&gt;
+&lt;td&gt;使用金鑰驗證 Token 是否合法沒有被串改，驗證合法則撈取 JWT Token Cookie 中的 user_id 撈取使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;呼叫 Refresh Token API 取得新的 JWT Token 儲存至 Cookie&lt;/td&gt;
+&lt;td&gt;若 JWT Token 失效，但 &lt;code&gt;exp&lt;/code&gt; 還在效期內，重新 Refresh 取得新的 Refresh JWT Token&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;使用新的 JWT Refresh Token 做驗證請求&lt;/td&gt;
+&lt;td&gt;透過新的 Refresh Token 重新驗證取得登入使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;jwt-token-效期過長安全性問題&#34;&gt;JWT Token 效期過長安全性問題&lt;/h2&gt;
+&lt;p&gt;當將 JWT Token 效期設定比較長，可以達到記住登入使用者帳號，讓使用者保持隨時是登入的狀態，但若時間設定過長（e.g. 3 年、5 年）則 Token 安全性會有問題，若此 Token 被劫取走，在這個這麼長的有效期限內，此 Token 都會是有效的可以合法的存取 API&lt;/p&gt;
+&lt;h2 id=&#34;jwt-token-加入-remember_token&#34;&gt;JWT Token 加入 remember_token&lt;/h2&gt;
+&lt;p&gt;在使用者資料表加入一個 &lt;code&gt;remember_token&lt;/code&gt; 的欄位，當作幫使用者做重新產生 JWT Token 驗證的動作，所以登入流程會變成&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步驟&lt;/th&gt;
+&lt;th&gt;流程&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;傳入帳號密碼驗證&lt;/td&gt;
+&lt;td&gt;驗證帳號密碼是否正確，資料庫是否有此帳號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;產生新的 remember_token 記錄到使用者資料表的 &lt;code&gt;remember_token&lt;/code&gt; 欄位&lt;/td&gt;
+&lt;td&gt;做為之後驗證重新登入用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;記錄使用者 user_id 及 remember_token 到 JWT Token Cookie&lt;/td&gt;
+&lt;td&gt;告訴前端此使用者的身份是誰，之後會透過這個含有 user_id 的 JWT Token cookie 做驗證&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;透過含有 user_id 及 remember_token 的 JWT Token Cookie 做其他驗證請求&lt;/td&gt;
+&lt;td&gt;使用金鑰驗證 Token 是否合法沒有被串改，驗證合法則撈取 JWT Token Cookie 中的 user_id 撈取使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;呼叫 Refresh Token API 取得新的 JWT Token 儲存至 Cookie&lt;/td&gt;
+&lt;td&gt;若 JWT Token 失效，但 &lt;code&gt;exp&lt;/code&gt; 還在效期內，重新 Refresh 取得新的 Refresh JWT Token&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;使用新的 JWT Refresh Token 做驗證請求&lt;/td&gt;
+&lt;td&gt;透過新的 Refresh Token 重新驗證取得登入使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;透過 remember_token 及 user_id 的 Cookie 做重新取得新 JWT Token&lt;/td&gt;
+&lt;td&gt;撈取 JWT Cookie 中的 remember_token 及 user_id，與資料庫做比對，確認是否 token 合法可以正常重新產生&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;使用新產生的 JWT Token 做驗證請求&lt;/td&gt;
+&lt;td&gt;透過新產生的 JWT Token 重新驗證取得登入使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/*&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;eyJ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;eXAiOiJKV&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;QiLCJhbGciOiJIUzI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NiJ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;.eyJpc&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MiOiJodHRwczovL&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;F&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;dGgua&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;VqeXVuLmNvbS&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;hcGkvdjEvdXNlci&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;hdXRoL&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;xvZ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;luIiwiaWF&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;IjoxNjIxMzIyMDg&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;LCJleHAiOjE&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MjE&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MDg&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ODYsIm&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;iZiI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;MTYyMTMyMjA&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NiwianRpIjoiSzRzbzNmeWJsMjBjUnFjeCIsInN&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;YiI&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;InVzZXItc&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;V&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;azU&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ODN&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;bXY&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;YXV&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;IiwicmVtZW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;iZXJfdG&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;rZW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;iOiJyYW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;kb&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;tcmVtZW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;iZXItdG&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;rZW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ifQ.GoW&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;zQ&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;ncIox--G&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;zrurNhEmTTpqWV_&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-2&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;gWWWsow&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;*/&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iss&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://auth.kejyun.com/api/v1/user/auth/login&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621322086&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;exp&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621408486&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1621322086&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;K4so3fybl20cRqcx&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;sub&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user-seuk5883zmv5auu&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remember_token&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;random-remember-token&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;當 JWT Token 效期時間很短時（例如 300 分鐘），在 JWT Token 過期時，也可以透過 Cookie 中的 remember_token 去重新驗證並產生新的 JWT Token 回傳給使用者，讓使用者可以持續使用合法的 JWT Token 不斷做存取&lt;/p&gt;
+&lt;h2 id=&#34;remember_token-安全性&#34;&gt;remember_token 安全性&lt;/h2&gt;
+&lt;p&gt;因為只要 JWT Token Cookie 過期時間設定的夠長，只要一直有 &lt;code&gt;remember_token&lt;/code&gt;，則使用者就可以一直無限期的一直不斷的維持登入狀態，這樣可能會有安全性的問題，所以在使用者自己觸發登出時，記得更新儲存在資料庫的 remember_token，讓其他有此 remember_token 的使用者無法繼續登入&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/244882/what-is-the-best-way-to-implement-remember-me-for-a-website&#34;&gt;security - What is the best way to implement &amp;ldquo;remember me&amp;rdquo; for a website? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/gokayokyay/api-authentication-workflow-with-jwt-and-refresh-tokens-5312&#34;&gt;API Authentication Workflow with JWT and Refresh Tokens - DEV Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tymondesigns/jwt-auth/issues/261&#34;&gt;Remember Me and Forgot Password functionality in JWT Auth · Issue #261 · tymondesigns/jwt-auth · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Advanced: 記住登入帳號 Remember Me</title>
+      <link>https://web-developer-for-newbie.kejyun.com/advanced/auth/remember-me/</link>
+      <pubDate>Tue, 18 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/advanced/auth/remember-me/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;一般登入流程&#34;&gt;一般登入流程&lt;/h2&gt;
+&lt;p&gt;傳統登入方式是透過帳號密碼登入後，透過 &lt;code&gt;cookie&lt;/code&gt; 中的 &lt;code&gt;session_id&lt;/code&gt; 去與 Server 的 &lt;code&gt;session&lt;/code&gt; 資料去做比對，如果有比對到 &lt;code&gt;session&lt;/code&gt; 資料的話，會從儲存在 &lt;code&gt;session&lt;/code&gt; 中的使用者編號，去資料庫或快取撈取使用者的資料，以達到登入該使用者的流程&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步驟&lt;/th&gt;
+&lt;th&gt;流程&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;傳入帳號密碼驗證&lt;/td&gt;
+&lt;td&gt;驗證帳號密碼是否正確，資料庫是否有此帳號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;記錄使用者資料及 session_id 到 Session&lt;/td&gt;
+&lt;td&gt;將登入使用者的資料儲存在 Session，之後其他 Request 可以直接取用，避免敏感資料讓其他使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;記錄使用者 session_id 到 Cookie&lt;/td&gt;
+&lt;td&gt;告訴前端此使用者的身份是誰，之後會透過這個含有 session_id 的 cookie 做驗證&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;透過 session_id 的 Cookie 做其他驗證請求&lt;/td&gt;
+&lt;td&gt;撈取 Cookie 中的 session_id 驗證 Server 的 Session 是否有此 session_id，沒有的話則表示未登入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;帳號登入必要條件&#34;&gt;帳號登入必要條件&lt;/h2&gt;
+&lt;p&gt;要確認帳號有登入有兩個條件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用者含有 session_id 的 Cookie 存在瀏覽器&lt;/li&gt;
+&lt;li&gt;Server 的 Session 中有此 session_id&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;要確保 Client 端的含有 session_id 的 Cookie 一直存在，這樣 Server 才能有 session_id 資料去做驗證&lt;/p&gt;
+&lt;p&gt;而且 Server 的 Session 有此 session_id 的使用者資料&lt;/p&gt;
+&lt;h2 id=&#34;session-限制&#34;&gt;Session 限制&lt;/h2&gt;
+&lt;p&gt;因為 Cookie 是存在使用者自己的瀏覽器端，所以要確保 Client 端的含有 session_id 的 Cookie 一直存在比較容易，看系統安全性的情境，可以將 Cookie 的過期時間設定很長即可，例如 1 年、3 年、5 年之類的，因為存再久也只是存在使用者自己的瀏覽器，對於 Server 是幾乎沒有任何負擔的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;額外的負擔應該就是每次 Request 都會把 cookie 傳送到 Server，Cookie 越多的話，每個 Request 需要傳送的資料就會越多，造成 Request 變得比較肥大，但這個就是取捨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但 Session 因為是存放在 Server 端，所以如果要完整地將使用者資料保留 1 年、3 年、5 年之類的負擔會很大，如果使用者一年只登入一次，我們卻要將他資料保留這麼久都沒用到，而當使用者越來越多達到百萬千萬級時，一個 Session 檔案雖然只有幾 k，但一乘以百萬千萬來說，對於硬體的儲存負擔還是很大的&lt;/p&gt;
+&lt;p&gt;所以 Session 的資料通常會依照使用者的情境，不會將 Session 儲存太久&lt;/p&gt;
+&lt;!--adsense--&gt;
+&lt;h2 id=&#34;記住登入帳號&#34;&gt;記住登入帳號&lt;/h2&gt;
+&lt;p&gt;為了減輕 Server 儲存 Session 的壓力，會在使用者資料表加入一個 &lt;code&gt;remember_token&lt;/code&gt; 的欄位，當作幫使用者做重新產生 Session 登入的動作，所以登入流程會變成&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步驟&lt;/th&gt;
+&lt;th&gt;流程&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;傳入帳號密碼驗證&lt;/td&gt;
+&lt;td&gt;驗證帳號密碼是否正確，資料庫是否有此帳號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;記錄使用者資料及 session_id 到 Session&lt;/td&gt;
+&lt;td&gt;將登入使用者的資料儲存在 Session，之後其他 Request 可以直接取用，避免敏感資料讓其他使用者資料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;記錄使用者 session_id 到 Cookie&lt;/td&gt;
+&lt;td&gt;告訴前端此使用者的身份是誰，之後會透過這個含有 session_id 的 cookie 做驗證&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;產生新的 remember_token 記錄到使用者資料表的 &lt;code&gt;remember_token&lt;/code&gt; 欄位&lt;/td&gt;
+&lt;td&gt;做為之後驗證重新登入用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;記錄使用者 remember_token 及 user_id 到 Cookie&lt;/td&gt;
+&lt;td&gt;當 Cookie 中的 session_id 找不到 Session 時，會用 user_id 及 remember_token 去驗證登入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;透過 session_id 的 Cookie 做其他驗證請求&lt;/td&gt;
+&lt;td&gt;撈取 Cookie 中的 session_id 驗證 Server 的 Session 是否有此 session_id，沒有的話則表示未登入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;透過 remember_token 及 user_id 的 Cookie 做重新登入&lt;/td&gt;
+&lt;td&gt;撈取 Cookie 中的 remember_token 及 user_id，與資料庫做比對，確認是否 token 合法可以正常登入，登入成功重新產生 Session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;當 Session 保留時間很短時（例如 20 分鐘），在 Session 移除時，也可以透過 remember_token 的 Cookie 去做重新登入的動作，並重新產生使用者的 Session，確保存放在 Server 中的 Session 都是近期登入的活躍使用者，確保不會有沒在使用的 Session，也可以讓使用者可以正常登入&lt;/p&gt;
+&lt;h2 id=&#34;remember_token-安全性&#34;&gt;remember_token 安全性&lt;/h2&gt;
+&lt;p&gt;因為只要 Cookie 過期時間設定的夠長，只要一直有 &lt;code&gt;remember_token&lt;/code&gt;，則使用者就可以一直無限期的一直不斷的維持登入狀態，這樣可能會有安全性的問題，所以在使用者自己觸發登出時，記得更新儲存在資料庫的 remember_token，讓其他有此 remember_token 的使用者無法繼續登入&lt;/p&gt;
+&lt;!--adsense--&gt;
+&lt;h2 id=&#34;以-laravel-記住登入舉例&#34;&gt;以 Laravel 記住登入舉例&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Laravel 版本 8.x&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;登入紀錄登入帳號&#34;&gt;登入紀錄登入帳號&lt;/h3&gt;
+&lt;p&gt;在 Laravel 原生記錄使用者 &lt;code&gt;vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php&lt;/code&gt; 程式中，在 &lt;code&gt;login()&lt;/code&gt; 函式的第二個參數是 &lt;code&gt;$remember = false&lt;/code&gt;，若傳入 &lt;code&gt;true&lt;/code&gt; 則會對使用者進行記錄登入帳號 token 的流程&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * Log a user into the application.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; *
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @param  bool  $remember
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @return void
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;AuthenticatableContract&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$remember&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// If the user should be permanently &amp;#34;remembered&amp;#34; by the application we will
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// queue a permanent cookie that contains the encrypted copy of the user
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// identifier. We will then decrypt this later to retrieve the users.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$remember&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 確保資料庫有此 remember_token，若沒有則產生新的
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;ensureRememberTokenIsSet&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 紀錄 remember_token 到 cookie
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;queueRecallerCookie&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;ensureRememberTokenIsSet()&lt;/code&gt; 函式會確保資料庫有產生 &lt;code&gt;remember_token&lt;/code&gt;，如果沒有的話則會重新產生一個 &lt;code&gt;remember_token&lt;/code&gt; 儲存至資料庫&lt;/p&gt;
+&lt;p&gt;產生完 &lt;code&gt;remember_token&lt;/code&gt; 後，則呼叫 &lt;code&gt;queueRecallerCookie()&lt;/code&gt; 紀錄 remember_token 到 cookie&lt;/p&gt;
+&lt;h3 id=&#34;紀錄-remember-token-的-cookie&#34;&gt;紀錄 Remember Token 的 Cookie&lt;/h3&gt;
+&lt;p&gt;在 Laravel 原生記錄 Remember Token &lt;code&gt;vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php&lt;/code&gt; 程式中，在 &lt;code&gt;queueRecallerCookie()&lt;/code&gt; 會紀錄此 Rememver Token&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第 1 個變數 &lt;code&gt;$user-&amp;gt;getAuthIdentifier()&lt;/code&gt; 是 user_id&lt;/li&gt;
+&lt;li&gt;第 2 個變數 &lt;code&gt;$user-&amp;gt;getRememberToken()&lt;/code&gt; 是資料庫的 remember_token&lt;/li&gt;
+&lt;li&gt;第 3 個變數 &lt;code&gt;$user-&amp;gt;getAuthPassword()&lt;/code&gt; 是使用的密碼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第 3 個參數在 Laravel 8.x 版本都沒有用到，不確定紀錄這個用途是要幹嘛&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * Queue the recaller cookie into the cookie jar.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; *
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @return void
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;queueRecallerCookie&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;AuthenticatableContract&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getCookieJar&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;queue&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;createRecaller&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getAuthIdentifier&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;|&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getRememberToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;|&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$user&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getAuthPassword&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;));&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;取得驗證使用者資料&#34;&gt;取得驗證使用者資料&lt;/h3&gt;
+&lt;p&gt;在使用 &lt;code&gt;auth()-&amp;gt;user()&lt;/code&gt; 撈取登入使用者資料時，會先使用 Session 試著撈取登入使用者的資料，當撈取不到 Session 中使用者的資料時，如果有 Remember Token，則會使用 Remember Token 去做登入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * Get the currently authenticated user.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; *
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; * @return \Illuminate\Contracts\Auth\Authenticatable|null
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 取得 Session 中的使用者編號，使用 Session 登入
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000&#34;&gt;$id&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;session&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;());&lt;/span&gt;
+
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// First we will try to load the user using the identifier in the session if
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// one exists. Otherwise we will check for a &amp;#34;remember me&amp;#34; cookie in this
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// request, and if one exists, attempt to retrieve the user using that.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;is_null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;provider&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;retrieveById&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;fireAuthenticatedEvent&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 使用 Remember Token 登入使用者（如果有的話）
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// If the user is null, but we decrypt a &amp;#34;recaller&amp;#34; cookie we can attempt to
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// pull the user data on that cookie which serves as a remember cookie on
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// the application. Once we have a user we can return it to the caller.
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;is_null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;is_null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$recaller&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;recaller&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;userFromRecaller&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$recaller&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;updateSession&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getAuthIdentifier&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;());&lt;/span&gt;
+
+            &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;fireLoginEvent&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$this&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;user&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/244882/what-is-the-best-way-to-implement-remember-me-for-a-website&#34;&gt;security - What is the best way to implement &amp;ldquo;remember me&amp;rdquo; for a website? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence#title.2&#34;&gt;Implementing Secure User Authentication in PHP Applications with Long-Term Persistence (Login with &amp;ldquo;Remember Me&amp;rdquo; Cookies) - Paragon Initiative Enterprises Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/gokayokyay/api-authentication-workflow-with-jwt-and-refresh-tokens-5312&#34;&gt;API Authentication Workflow with JWT and Refresh Tokens - DEV Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://laravel.com/docs/8.x/authentication#remembering-users&#34;&gt;Authentication - Laravel - The PHP Framework For Web Artisans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/50820/&#34;&gt;session、cookie與&amp;quot;記住我的登入狀態&amp;quot;的功能的實現 | 程式前沿&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Advanced: 驗證 Auth</title>
+      <link>https://web-developer-for-newbie.kejyun.com/advanced/auth/</link>
+      <pubDate>Tue, 18 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/advanced/auth/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

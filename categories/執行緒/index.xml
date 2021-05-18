@@ -1,0 +1,37 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Developer for newbie 網頁工程師菜雞修煉場 – 執行緒</title>
+    <link>https://web-developer-for-newbie.kejyun.com/categories/%E5%9F%B7%E8%A1%8C%E7%B7%92/</link>
+    <description>Recent content in 執行緒 on Web Developer for newbie 網頁工程師菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 May 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://web-developer-for-newbie.kejyun.com/categories/%E5%9F%B7%E8%A1%8C%E7%B7%92/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Advanced: 程序（Process）與執行緒（Thread）</title>
+      <link>https://web-developer-for-newbie.kejyun.com/advanced/system/process-thread/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://web-developer-for-newbie.kejyun.com/advanced/system/process-thread/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/erens-tech-book/%E7%90%86%E8%A7%A3-process-thread-94a40721b492&#34;&gt;【恐龍】理解 Process &amp;amp; Thread. 整理網路上對於 Process 和 Thread 的解釋 | by Yueh-Lun Huang (Eren) | Eren Tech-Sci Books | Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://totoroliu.medium.com/program-process-thread-%E5%B7%AE%E7%95%B0-4a360c7345e5&#34;&gt;Program/Process/Thread 差異. Program/Process/Thread 是作業系統(Operating… | by Po-Ching Liu | Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

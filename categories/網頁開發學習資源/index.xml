@@ -982,6 +982,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/d3/d3-time&#34;&gt;d3-time&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;資料庫&#34;&gt;資料庫&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sql.js.org/#/&#34;&gt;sql.js&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sql-js/sql.js/&#34;&gt;GitHub - sql-js/sql.js: A javascript library to run SQLite on the web.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/&#34;&gt;Hosting SQLite databases on Github Pages - (or any static file hoster) - phiresky&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
